@@ -3,25 +3,22 @@
 using namespace std;
 
 int main(){
-    int x,y,i=0,m=0,j=0;
+    int N, R, maria, joao;
 
-    cin >> x;
+    while(scanf("%d", &N)){
+        if(!N)  break;
 
-    while(i<x){
-        cin >> y;
+        maria = 0, joao = 0;
 
-        if(y==0){
-            m++;
+        for(int i = 0; i < N; ++i){
+            scanf("%d", &R);
+
+            if(R)   ++joao;
+            else    ++maria;
         }
-        else if(y==1){
-            j++;
-        }
 
-        i++;
+        printf("Mary won %d times and John won %d times\n", maria, joao);
     }
-
-    cout << "Mary won " << m <<  " times and John won " << j << " times" << endl;
-
 
     return 0;
 }
